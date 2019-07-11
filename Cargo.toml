@@ -1,0 +1,19 @@
+[package]
+name = "hexscale"
+version = "0.1.0"
+authors = ["Lars Andersson <larsand@gmail.com>"]
+
+[dependencies]
+regex = "1.0"
+itertools = "0.7.3"
+
+[dev-dependencies]
+bencher = "0.1.5"
+
+[[bench]]
+name = "bench"
+harness = false
+
+[[bin]]
+name = "hexscale"
+path = "src/hexscale.rs"

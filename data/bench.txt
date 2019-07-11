@@ -1,0 +1,132 @@
+
+# HexScale Benchmarking Data
+
+Roses are #ff0000, 
+Violets are #0000ff, 
+Sugar is #ffffff,
+and so are you.
+
+Color One: #ff0040 EOL
+
+# This is a comment, this is a color r"#([[:xdigit:]]{2})";
+
+Color Two: #808060    # Brown?
+
+Not a color: #ffK055
+
+
+Palette: {
+    "A": Red,
+    "C": "#ff0000",
+    "D": "808080"
+}
+
+" Default GUI Colours
+let s:background = "#303030"
+let s:line = "#282a2e"
+let s:comment = "#707070"
+let s:window = "#4d5057"
+let s:window = "#404040"
+
+	" C Highlighting
+    hi link cType Type
+    hi link cStucture Structure
+    hi link cDefine Define
+    hi link cConditional Conditional # Color in a comment #666666
+    hi link cStatement Statement
+    hi link cNumber Number
+    hi link cCustomFunc Function
+    hi link cPreProc PreProc
+
+# SOME C++ CODE
+
+struct FrameData
+{
+    FrameData(FrameType frame_type, uint64_t reception_time_us, const Json::Value & json_stats = Json::Value()) :
+        color = #000000, // 0xff0000
+        type(frame_type),
+
+        const char *color = "#787878";
+        stats(json_stats)
+    { }
+
+    virtual ~FrameData() {};
+
+    virtual const uint8_t* buffer() const = 0;
+    virtual toolbox::ImageData getPreview(int width, int height, const Json::Value & params = Json::Value()) const = 0;
+
+    virtual FrameData* clone() const = 0; // { return new FrameData(*this); }
+
+    uint32      color;
+    FrameType   type;
+    Json::Value stats;
+};
+
+# HTML DEST DATA:
+
+<html>
+<head><title>rgb.txt</title>
+<style>
+body {
+    background-color: white;
+    color: black;
+}
+td {
+    color: black;
+}
+td.bg:hover {
+    border-style: solid;
+}
+</style>
+<script language="javascript"><!--
+var bodyrule = document.styleSheets[0].cssRules[0];
+function chfg(c) 
+{
+    tdrule.style.cssText = "color: " + c + ";";
+}
+//--></script>
+</head>
+<body>
+<h1>rgb.txt</h1>
+<h2>! $XConsortium: rgb.txt,v 10.41 94/02/20 18:39:36 rws Exp $
+</h2>
+<p style='color:black'>Click on a color to change the background, click on the color name to change the foreground.  </p>
+<p style='color:white'>Click on a color to change the background, click on the color name to change the foreground.  </p>
+<table border=0 >
+</tr><tr>
+<td width=100 bgcolor='#fffafa' onclick="chbg('fffafa')" class="bg">&nbsp;</td>
+</a>&nbsp;#fffafa</td>
+<td width=100 bgcolor='#f8f8ff' onclick="chbg('f8f8ff')" class="bg">&nbsp;</td>
+<td><a class="fg" onclick="chfg('f8f8ff')">ghost white
+</tr><tr>
+<td width=100 bgcolor='#f8f8ff' onclick="chbg('f8f8ff')" class="bg">&nbsp;</td>
+<td width=100 bgcolor='#f5f5f5' onclick="chbg('f5f5f5')" class="bg">&nbsp;</td>
+<td><a class="fg" onclick="chfg('f5f5f5')">white smoke
+</tr><tr>
+
+" JSON
+{
+  ...
+  "red": {
+    "name": "Red",
+    "hex": "#f00",
+    "rgb": [255, 0, 0]
+  }
+  ...
+}
+
+" --------------------- Scripts ----------------------
+
+let s:orange = "#de935f"
+let s:yellow = "#d0a654"
+let s:green = "#,850000"
+
+let s:contrast="low"
+
+if (match(system("cat /etc/issue"), "Ubuntu") != -1)
+	let s:contrast = "high"
+    let s:line = "a12d00"
+endif
+
+DUMMY: #AKAKAKAKAKAKA
+KSS
